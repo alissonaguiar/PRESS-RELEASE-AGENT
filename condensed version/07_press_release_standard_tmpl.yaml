@@ -1,0 +1,57 @@
+template:
+  id: press-release-standard-template-v1
+  name: Standard Press Release
+  version: 1.0
+  output:
+    format: markdown
+    filename: press_release_{{topic_slug}}.md
+    title: "Press Release: {{headline}}"
+
+sections:
+  - id: release-immediate
+    template: |
+      **PARA DIVULGAÇÃO IMEDIATA**
+
+  - id: headline
+    template: |
+      # {{headline}}
+
+  - id: subheadline
+    template: |
+      ## {{subheadline}}
+
+  - id: body
+    template: |
+      **{{city_state}} – {{date}} –** {{introduction_paragraph}}
+
+      {{body_paragraph_1}}
+
+      {{body_paragraph_2}}
+
+  - id: quote
+    template: |
+      > "{{quote_text}}"
+      >
+      > **– {{spokesperson_name}}, {{spokesperson_title}}**
+
+  - id: closing-body
+    template: |
+      {{closing_paragraph}}
+
+  - id: boilerplate
+    template: |
+      **Sobre a {{company_name}}**
+
+      {{boilerplate_text}}
+
+  - id: media-contact
+    template: |
+      **Contato de Mídia:**
+      [Nome do Contato]
+      [Cargo]
+      [E-mail]
+      [Telefone]
+
+  - id: end-mark
+    template: |
+      ###

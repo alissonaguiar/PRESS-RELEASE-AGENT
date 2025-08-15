@@ -1,0 +1,74 @@
+template:
+  id: press-release-standard-template-v1
+  name: Standard Press Release
+  version: 1.0
+  output:
+    format: markdown
+    filename: press_release_{{topic_slug}}.md
+    title: "Press Release: {{headline}}"
+
+sections:
+  - id: release-immediate
+    title: "" # Sem título visível
+    template: |
+      **PARA DIVULGAÇÃO IMEDIATA**
+
+  - id: headline
+    title: "Título Principal"
+    instruction: "Crie um título claro, conciso e impactante que resuma a notícia principal. Use verbos de ação."
+    template: |
+      # {{headline}}
+
+  - id: subheadline
+    title: "Subtítulo"
+    instruction: "Elabore o título, fornecendo um detalhe adicional ou o principal benefício da notícia."
+    template: |
+      ## {{subheadline}}
+
+  - id: body
+    title: "Corpo do Comunicado"
+    instruction: "Desenvolva a história, começando com a dateline e o parágrafo de abertura (lede)."
+    template: |
+      **{{city_state}} – {{date}} –** {{introduction_paragraph}}
+
+      {{body_paragraph_1}}
+
+      {{body_paragraph_2}}
+
+  - id: quote
+    title: "Citação do Porta-Voz"
+    instruction: "Insira uma citação relevante que adicione uma perspectiva humana ou estratégica à notícia."
+    template: |
+      > "{{quote_text}}"
+      >
+      > **– {{spokesperson_name}}, {{spokesperson_title}}**
+
+  - id: closing-body
+    title: "Parágrafo de Encerramento"
+    instruction: "Adicione um parágrafo final que reforce a mensagem principal ou inclua um call-to-action."
+    template: |
+      {{closing_paragraph}}
+
+  - id: boilerplate
+    title: "Sobre a Empresa"
+    instruction: "Insira o texto padrão que descreve a empresa (boilerplate)."
+    template: |
+      **Sobre a {{company_name}}**
+
+      {{boilerplate_text}}
+
+  - id: media-contact
+    title: "Contato de Mídia"
+    instruction: "Forneça informações de contato para a imprensa."
+    template: |
+      **Contato de Mídia:**
+      [Nome do Contato]
+      [Cargo]
+      [E-mail]
+      [Telefone]
+
+  - id: end-mark
+    title: "Marca de Encerramento"
+    instruction: "Use a marca padrão para sinalizar o fim do comunicado."
+    template: |
+      ###
